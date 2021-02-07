@@ -1,27 +1,37 @@
-import React, { Components } from 'react'
+import React, { Component } from 'react'
 
-class NewFood extends Component() {
-    // super(props)
-    // foodName = { value: '' };
-    // foodImage = { value: '' };
-    // foodCalories = { value: '' };
-    // quantity = 0;
+class NewFood extends Component {
 
+    state = {
+        foodName: '',
+        // foodImage: { value: '' },
+        // foodCalories: { value: '' },
+        // quantity: 0
+    }
+    
+    handleChange = (event) => {
+        this.setState({foodName: event.target.value})
+    }
+
+    handleClick = () => {
+        // this.props.foods.push(
+        //     {
+        //         foodName: this.state.foodName
+        //     }
+        // )
+        
+    }
+    
     render() {
+        
         return (
-            'Hello World'
-            // <form onSubmit={this.handleSubmit}>
-            //     <label>Food Name:</label>
-            //     <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <form >
+                <label>Food Name:</label>
+                <input type="text" value={this.state.foodName} onChange={this.handleChange} />
 
-            //     <label>Food Image:</label>
-            //     <input type="text" value={this.state.value} onChange={this.handleChange} />
+                <input type="submit" value="Submit" onClick={this.handleClick}/>
+            </form>
 
-            //     <label>Food Calories:</label>
-            //     <input type="text" value={this.state.value} onChange={this.handleChange} />
-
-            //     <input type="submit" value="Submit" />
-            // </form>
         );
     }
 
