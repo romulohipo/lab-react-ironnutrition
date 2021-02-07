@@ -25,7 +25,8 @@ const FoodBox = props => {
               <input className="input" type="number" value={props.quantity} />
             </div>
             <div className="control">
-              <button className="button is-info">
+              <button className="button is-info"  onClick={() => props.handleClick(props.id)}>
+              
                 +
               </button>
             </div>
