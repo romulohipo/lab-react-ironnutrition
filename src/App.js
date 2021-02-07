@@ -1,7 +1,7 @@
 import './App.css';
 import 'bulma/css/bulma.css';
 import React from 'react';
-// import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom'
 import FoodsList from './Components/foodsList/FoodsList'
 
 function App() {

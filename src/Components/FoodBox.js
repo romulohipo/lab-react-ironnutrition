@@ -3,6 +3,12 @@ import React from 'react';
 
 const FoodBox = props => {
 
+  let newQuantity = 0
+
+  const handleChange = (event) => {
+    newQuantity = event.target.value;
+  }
+
   return (
     <div className="box">
       <article className="media">
@@ -22,10 +28,10 @@ const FoodBox = props => {
         <div className="media-right">
           <div className="field has-addons">
             <div className="control">
-              <input className="input" type="number" value={props.quantity} />
+              <input className="input" type="number" placeholder={props.quantity} min="0" onChange={handleChange}/>
             </div>
             <div className="control">
-              <button className="button is-info"  onClick={() => props.handleClick(props.id)}>
+              <button className="button is-info" onClick={() => props.handleClick(props.name, props.image, props.calories, newQuantity)}>
               
                 +
               </button>
